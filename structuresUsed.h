@@ -11,6 +11,7 @@ struct Batters
 		type = val["type"].asString();
 	}
 
+
 	std::string id;
 	std::string type;
 };
@@ -24,6 +25,7 @@ struct Toppings
 		id = val["id"].asString();
 		type = val["type"].asString();
 	}
+
 
 	std::string id;
 	std::string type;
@@ -55,6 +57,12 @@ struct Item
 	std::string name;
 	double ppu;
 
+
 	std::vector<Batters> vecBatters;
 	std::vector<Toppings> vecToppings;
 };
+
+bool isItemEmpty(Item itm)
+{
+	return itm.id == "" && itm.name == "" && itm.type == "" && itm.ppu == NULL;
+}
