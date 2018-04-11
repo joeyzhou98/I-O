@@ -50,7 +50,16 @@ struct Item
 		for (auto var : val["topping"])
 			vecToppings.push_back(Toppings(var));
 	}
-
+	//(v[i].id, v[i].type, v[i].name, (v[i].vecBatters)[j], (v[i].vecToppings)[k])
+	Item(std::string idenfier, std::string typ, std::string nm, Batters bttrs, Toppings tppngs):
+		id(idenfier),
+		type(typ),
+		name(nm)
+	{
+		ppu = 0;
+		vecBatters.push_back(bttrs);
+		vecToppings.push_back(tppngs);
+	}
 
 	std::string id;
 	std::string type;
