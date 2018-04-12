@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "writer.h"
 #include <utility>
 #include <assert.h>

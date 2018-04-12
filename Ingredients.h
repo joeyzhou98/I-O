@@ -62,16 +62,17 @@ string getItemInfo(Item itm)
 	os << ""	 << itm.id 
 	   << "\t\t" << itm.type
 	   << "\t\t" << itm.name
-	   << "\t\t" << itm.ppu
+//	   << "\t\t" << itm.ppu
 	   << "\t\t" << itm.vecBatters[0].type
-	   << "\t\t" << itm.vecToppings[4].type;
+	   << "\t\t" << itm.vecToppings[0].type;
 
 
 	return os.str();
 }
 
-void const saveMenuToFolder(vector<Item> AllItems, ofstream outputFileHandler)
+void const saveMenuToFolder(vector<Item> AllItems, ofstream& outputFileHandler)
 {
+	outputFileHandler << "Id\t\tType\t\tName\t\tBatter\t\tTopping" << endl << endl;
 	for (Item itm : AllItems)
 		outputFileHandler << getItemInfo(itm) << endl;
 }

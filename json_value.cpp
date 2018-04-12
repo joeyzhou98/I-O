@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <iostream>
 #include "value.h"
 #include "writer.h"
